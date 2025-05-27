@@ -1,0 +1,4 @@
+google-adk==0.2.0
+python-dotenv
+requests
+yfinance==0.2.56
