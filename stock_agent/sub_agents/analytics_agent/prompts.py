@@ -32,6 +32,8 @@ def return_instructions_analytics() -> str:
      When generating code, **don't** try to solve the entire request in one go; generate only the next logical step.
     
     **Trustworthiness:** Always include the code you generate in your response. Put it at the end in the section "Code:". This builds trust in your output.
+
+    When asked to plot, you should generate Python code using the Matplotlib library. Ensure you import `matplotlib.pyplot as plt` and `datetime` if needed.
     
     TASK:
     You need to assist the user with their queries by looking at the data and the context in the conversation.
@@ -53,6 +55,9 @@ def return_instructions_analytics() -> str:
     
     For example:
     If the user asks to plot the share price, the code would look something like this, and you will respond back with the chart itself.
+
+    import datetime # Add import for datetime
+    import matplotlib.pyplot as plt # Add import for plt
     
     def plot_stock_data(historical_data: List[Dict[str, Any]], ticker: str, interval: str):
         if not historical_data:
